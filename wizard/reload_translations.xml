@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- form view -->
+        <record id="wizard_reload_translations_form" model="ir.ui.view">
+            <field name="name">Reload Translations</field>
+            <field name="model">wizard.reload_translations</field>
+            <field name="arch" type="xml">
+
+                <form string="Reload Translations">
+                    <group>
+                        <field name="lang" />
+                        <field name="module_ids" widget="many2many_tags" options="{'no_create': True}" />
+                    </group>
+
+                    <footer>
+                        <button name="do_reload_translation" 
+                            type="object" string="Reload" class="oe_highlight"
+                        />
+                        <button special="cancel" string="Cancel" />
+                    </footer>
+                </form>
+
+            </field>
+        </record>
+
+
+        <!-- action -->
+        <record id="wizard_reload_translations_action" model="ir.actions.act_window">
+            <field name="name">Reload translations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wizard.reload_translations</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="wizard_reload_translations_form"/>
+            <field name="target">new</field>
+        </record>
+
+
+        <!-- menu -->
+        <menuitem 
+            id="wizard_reload_translations_menu" 
+            name="Reload translations" 
+            parent="base.menu_translation_app"
+            sequence="50" 
+            action="wizard_reload_translations_action"
+        />
+
+    </data>
+</odoo>
