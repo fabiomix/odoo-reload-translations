@@ -15,7 +15,7 @@
                     </group>
 
                     <footer>
-                        <button name="do_reload_translation" 
+                        <button name="do_reload_translations" 
                             type="object" string="Reload" class="oe_highlight"
                         />
                         <button special="cancel" string="Cancel" />

@@ -28,7 +28,7 @@ class ReloadTranslations(models.TransientModel):
 
 	module_ids = fields.Many2many(
 			comodel_name='ir.module.module', 
-			relation='wizard_reload_translation_module_rel', 
+			relation='wizard_reload_translations_module_rel', 
 			column1='wizard_id', 
 			column2='module_id',
 			string='Modules', 
@@ -36,5 +36,5 @@ class ReloadTranslations(models.TransientModel):
 		)
 
 
-	def do_reload_translation(self):
+	def do_reload_translations(self):
 		pass
