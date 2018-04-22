@@ -37,4 +37,7 @@ class ReloadTranslations(models.TransientModel):
 
 
 	def do_reload_translations(self):
-		pass
+
+		# call method used during module install
+		# and force terms overwrite
+		self.module_ids.with_context(overwrite=True).update_translations(self.lang)
