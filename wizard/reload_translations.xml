@@ -12,6 +12,7 @@
                     <group>
                         <field name="lang" />
                         <field name="module_ids" widget="many2many_tags" options="{'no_create': True}" />
+                        <field name="clean_install" />
                     </group>
 
                     <footer>

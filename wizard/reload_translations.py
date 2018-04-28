@@ -35,9 +35,28 @@ class ReloadTranslations(models.TransientModel):
 			domain=[('state','=','installed')]
 		)
 
+	clean_install = fields.Boolean(
+			string="Clean install", 
+			help="Delete and re-create translations, instead of simply try to update them."
+		)
+
 
 	def do_reload_translations(self):
+
+		if self.clean_install:
+
+			# get selected module names
+			module_names = self.module_ids.mapped('name')
+
+			# unlink old translation terms
+			self.env['ir.translation'].sudo().search([
+				('lang', '=', self.lang),
+				('type', '=', 'model'),
+				('module', 'in', module_names)
+			]).unlink()
 
 		# call method used during module install
 		# and force terms overwrite
 		self.module_ids.with_context(overwrite=True).update_translations(self.lang)
+
+		return True
