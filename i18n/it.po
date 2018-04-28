@@ -1,0 +1,98 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* reload-translations
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-28 17:20+0000\n"
+"PO-Revision-Date: 2018-04-28 17:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: reload-translations
+#: model:ir.ui.view,arch_db:reload-translations.wizard_reload_translations_form
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: reload-translations
+#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_clean_install
+msgid "Clean install"
+msgstr "Installazione pulita"
+
+#. module: reload-translations
+#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: reload-translations
+#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: reload-translations
+#: model:ir.model.fields,help:reload-translations.field_wizard_reload_translations_clean_install
+msgid "Delete and re-create translations, instead of simply try to update them."
+msgstr "Cancella e ricarica traduzioni, invece di cercare semplicemente di aggiornarle."
+
+#. module: reload-translations
+#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_display_name
+msgid "Display Name"
+msgstr "Nome Visualizzato"
+
+#. module: reload-translations
+#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_id
+msgid "ID"
+msgstr "ID"
+
+#. module: reload-translations
+#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_lang
+msgid "Language"
+msgstr "Lingua"
+
+#. module: reload-translations
+#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations___last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: reload-translations
+#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_write_uid
+msgid "Last Updated by"
+msgstr "Ultima modifica di"
+
+#. module: reload-translations
+#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_write_date
+msgid "Last Updated on"
+msgstr "Ultima modifica il"
+
+#. module: reload-translations
+#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_module_ids
+msgid "Modules"
+msgstr "Moduli"
+
+#. module: reload-translations
+#: model:ir.ui.view,arch_db:reload-translations.wizard_reload_translations_form
+msgid "Reload"
+msgstr "Ricarica"
+
+#. module: reload-translations
+#: model:ir.ui.view,arch_db:reload-translations.wizard_reload_translations_form
+msgid "Reload Translations"
+msgstr "Ricarica traduzioni"
+
+#. module: reload-translations
+#: model:ir.actions.act_window,name:reload-translations.wizard_reload_translations_action
+#: model:ir.ui.menu,name:reload-translations.wizard_reload_translations_menu
+msgid "Reload translations"
+msgstr "Ricarica traduzioni"
+
+#. module: reload-translations
+#: model:ir.model,name:reload-translations.model_wizard_reload_translations
+msgid "wizard.reload_translations"
+msgstr "wizard.reload_translations"
+
