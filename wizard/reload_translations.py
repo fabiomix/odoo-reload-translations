@@ -8,55 +8,61 @@ _logger = logging.getLogger(__name__)
 
 
 class ReloadTranslations(models.TransientModel):
-	_name = 'wizard.reload_translations'
+    _name = 'wizard.reload_translations'
 
 
-	def get_language_list(self):
-		active_languages = self.env['res.lang'].search([
-				('translatable', '=', True), 
-				('active', '=', True)
-			])
+    # Default methods
 
-		return [(l.code, l.name) for l in active_languages]
+    def get_language_list(self):
+        active_languages = self.env['res.lang'].search([
+            ('translatable', '=', True),
+            ('active', '=', True)
+        ])
 
-	
-	lang = fields.Selection(
-			selection=get_language_list, 
-			string="Language",
-			required=True
-		)
-
-	module_ids = fields.Many2many(
-			comodel_name='ir.module.module', 
-			relation='wizard_reload_translations_module_rel', 
-			column1='wizard_id', 
-			column2='module_id',
-			string='Modules', 
-			domain=[('state','=','installed')]
-		)
-
-	clean_install = fields.Boolean(
-			string="Clean install", 
-			help="Delete and re-create translations, instead of simply try to update them."
-		)
+        return [(l.code, l.name) for l in active_languages]
 
 
-	def do_reload_translations(self):
+    # Fields declaration
 
-		if self.clean_install:
+    lang = fields.Selection(
+        selection=get_language_list,
+        string="Language",
+        required=True
+    )
 
-			# get selected module names
-			module_names = self.module_ids.mapped('name')
+    module_ids = fields.Many2many(
+        comodel_name='ir.module.module',
+        relation='wizard_reload_translations_module_rel',
+        column1='wizard_id',
+        column2='module_id',
+        string='Modules',
+        domain=[('state', '=', 'installed')]
+    )
 
-			# unlink old translation terms
-			self.env['ir.translation'].sudo().search([
-				('lang', '=', self.lang),
-				('type', '=', 'model'),
-				('module', 'in', module_names)
-			]).unlink()
+    clean_install = fields.Boolean(
+        string="Clean install",
+        help="Delete and re-create translations, instead of simply try to update them."
+    )
 
-		# call method used during module install
-		# and force terms overwrite
-		self.module_ids.with_context(overwrite=True).update_translations(self.lang)
 
-		return True
+    # Action methods
+
+    def do_reload_translations(self):
+
+        if self.clean_install:
+
+            # get selected module names
+            module_names = self.module_ids.mapped('name')
+
+            # unlink old translation terms
+            self.env['ir.translation'].sudo().search([
+                ('lang', '=', self.lang),
+                ('type', '=', 'model'),
+                ('module', 'in', module_names)
+            ]).unlink()
+
+        # call method used during module install
+        # and force terms overwrite
+        self.module_ids.with_context(overwrite=True).update_translations(self.lang)
+
+        return True
