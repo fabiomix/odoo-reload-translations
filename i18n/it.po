@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* reload-translations
+#	* reload_translations
 #
 msgid ""
 msgstr ""
@@ -15,84 +15,84 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: reload-translations
-#: model:ir.ui.view,arch_db:reload-translations.wizard_reload_translations_form
+#. module: reload_translations
+#: model:ir.ui.view,arch_db:reload_translations.wizard_reload_translations_form
 msgid "Cancel"
 msgstr "Annulla"
 
-#. module: reload-translations
-#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_clean_install
+#. module: reload_translations
+#: model:ir.model.fields,field_description:reload_translations.field_wizard_reload_translations_clean_install
 msgid "Clean install"
 msgstr "Installazione pulita"
 
-#. module: reload-translations
-#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_create_uid
+#. module: reload_translations
+#: model:ir.model.fields,field_description:reload_translations.field_wizard_reload_translations_create_uid
 msgid "Created by"
 msgstr "Creato da"
 
-#. module: reload-translations
-#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_create_date
+#. module: reload_translations
+#: model:ir.model.fields,field_description:reload_translations.field_wizard_reload_translations_create_date
 msgid "Created on"
 msgstr "Creato il"
 
-#. module: reload-translations
-#: model:ir.model.fields,help:reload-translations.field_wizard_reload_translations_clean_install
+#. module: reload_translations
+#: model:ir.model.fields,help:reload_translations.field_wizard_reload_translations_clean_install
 msgid "Delete and re-create translations, instead of simply try to update them."
 msgstr "Cancella e ricarica traduzioni, invece di cercare semplicemente di aggiornarle."
 
-#. module: reload-translations
-#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_display_name
+#. module: reload_translations
+#: model:ir.model.fields,field_description:reload_translations.field_wizard_reload_translations_display_name
 msgid "Display Name"
 msgstr "Nome Visualizzato"
 
-#. module: reload-translations
-#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_id
+#. module: reload_translations
+#: model:ir.model.fields,field_description:reload_translations.field_wizard_reload_translations_id
 msgid "ID"
 msgstr "ID"
 
-#. module: reload-translations
-#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_lang
+#. module: reload_translations
+#: model:ir.model.fields,field_description:reload_translations.field_wizard_reload_translations_lang
 msgid "Language"
 msgstr "Lingua"
 
-#. module: reload-translations
-#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations___last_update
+#. module: reload_translations
+#: model:ir.model.fields,field_description:reload_translations.field_wizard_reload_translations___last_update
 msgid "Last Modified on"
 msgstr "Ultima modifica il"
 
-#. module: reload-translations
-#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_write_uid
+#. module: reload_translations
+#: model:ir.model.fields,field_description:reload_translations.field_wizard_reload_translations_write_uid
 msgid "Last Updated by"
 msgstr "Ultima modifica di"
 
-#. module: reload-translations
-#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_write_date
+#. module: reload_translations
+#: model:ir.model.fields,field_description:reload_translations.field_wizard_reload_translations_write_date
 msgid "Last Updated on"
 msgstr "Ultima modifica il"
 
-#. module: reload-translations
-#: model:ir.model.fields,field_description:reload-translations.field_wizard_reload_translations_module_ids
+#. module: reload_translations
+#: model:ir.model.fields,field_description:reload_translations.field_wizard_reload_translations_module_ids
 msgid "Modules"
 msgstr "Moduli"
 
-#. module: reload-translations
-#: model:ir.ui.view,arch_db:reload-translations.wizard_reload_translations_form
+#. module: reload_translations
+#: model:ir.ui.view,arch_db:reload_translations.wizard_reload_translations_form
 msgid "Reload"
 msgstr "Ricarica"
 
-#. module: reload-translations
-#: model:ir.ui.view,arch_db:reload-translations.wizard_reload_translations_form
+#. module: reload_translations
+#: model:ir.ui.view,arch_db:reload_translations.wizard_reload_translations_form
 msgid "Reload Translations"
 msgstr "Ricarica traduzioni"
 
-#. module: reload-translations
-#: model:ir.actions.act_window,name:reload-translations.wizard_reload_translations_action
-#: model:ir.ui.menu,name:reload-translations.wizard_reload_translations_menu
+#. module: reload_translations
+#: model:ir.actions.act_window,name:reload_translations.wizard_reload_translations_action
+#: model:ir.ui.menu,name:reload_translations.wizard_reload_translations_menu
 msgid "Reload translations"
 msgstr "Ricarica traduzioni"
 
-#. module: reload-translations
-#: model:ir.model,name:reload-translations.model_wizard_reload_translations
+#. module: reload_translations
+#: model:ir.model,name:reload_translations.model_wizard_reload_translations
 msgid "wizard.reload_translations"
 msgstr "wizard.reload_translations"
 
