@@ -65,4 +65,7 @@ class ReloadTranslations(models.TransientModel):
         # and force terms overwrite
         self.module_ids.with_context(overwrite=True).update_translations(self.lang)
 
-        return True
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'reload',
+        }
